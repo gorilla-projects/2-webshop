@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Webshop 2</title>
+
+    <link rel="icon" href="/assets/images/cg-favicon.png" sizes="32x32">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+    <script src="assets/js/fruits.js"></script>
+    <script src="assets/js/components/product.js"></script>
+</head>
+
+<body>
+    <main id="app">
+        <div class="container-fluid p-0">
+            <header>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6 text-center pt-5">
+                        <h1>{{ appName }}</h1>
+                    </div>
+                    <div class="col-md-3 text-end pt-5">
+                        <i class="bi bi-cart4" style="font-size: 2em;"></i>
+                    </div>
+                </div>
+            </header>
+
+            <section class="content container">
+                <div class="row">
+                    <div class="col-md-4 pt-3" v-for="fruit in fruits">
+                        <product :fruit_data="fruit"></product>
+                    </div>
+                </div>
+            </section>
+
+            <footer>Footer</footer>
+        </div>
+    </main>
+
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
