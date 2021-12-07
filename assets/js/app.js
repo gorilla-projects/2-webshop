@@ -1,8 +1,11 @@
-var app = new Vue({
+let app = new Vue({
     el: '#app',
+
     data: {
         appName: 'The Fruit Bowl',
+        animal: 'Horse',
         products: [],
+        showHeader: true,
     },
 
     mounted() {

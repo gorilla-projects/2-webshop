@@ -9,20 +9,23 @@
     <title>Webshop 2</title>
 
     <link rel="icon" href="/assets/images/cg-favicon.png" sizes="32x32">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/assets/css/style.css">
 
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="node_modules/vue/dist/vue.min.js"></script>
-    <script src="assets/js/fruits.js"></script>
-    <script src="assets/js/components/product.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/node_modules/vue/dist/vue.min.js"></script>
+
+    <script src="assets/js/config.js"></script>
+
+    <script src="/assets/js/fruits.js"></script>
+    <script src="/assets/js/components/product.js"></script>
 </head>
 
 <body>
     <main id="app">
         <div class="container-fluid p-0">
-            <header>
+            <header v-if="showHeader">
                 <div class="row">
                     <div class="col-md-3"></div>
                     <div class="col-md-6 text-center pt-5">
