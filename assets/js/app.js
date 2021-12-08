@@ -17,6 +17,14 @@ let app = new Vue({
     methods: {
         updateCart(id) {
             this.products.push(id)
+        },
+
+        showCart() {
+            $('.layer').fadeIn();
+
+            $('.cart').toggle({
+                direction: 'right',
+            });
         }
     }
 })
