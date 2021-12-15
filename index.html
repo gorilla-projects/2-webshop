@@ -17,7 +17,7 @@
     <script src="/node_modules/jquery/dist/jquery.min.js"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/node_modules/vue/dist/vue.min.js"></script>
-    
+
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
 
     <script src="assets/js/config.js"></script>
@@ -28,10 +28,10 @@
 </head>
 
 <body>
-    <div class="layer"></div>
-
     <main id="app">
-        <shopping-cart></shopping-cart>
+        <div class="layer" @click="fadeOutShoppingCart"></div>
+
+        <shopping-cart ref="cartComponent" first_name="Toby"></shopping-cart>
 
         <div class="container-fluid p-0">
             <header>
@@ -47,11 +47,7 @@
             </header>
 
             <section class="content container">
-                <div class="row">
-                    <div class="col-md-4 pt-3" v-for="fruit in fruits">
-                        <product :fruit_data="fruit"></product>
-                    </div>
-                </div>
+                <products fruit_data="something" first_name="Toby" last_name="Versteeg" insertion="van"></products>
             </section>
 
             <footer>Footer</footer>

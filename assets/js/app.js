@@ -3,20 +3,21 @@ let app = new Vue({
 
     data: {
         appName: 'The Fruit Bowl',
-        animal: 'Horse',
-        products: [],
-        showHeader: true,
+        shoppingCart: [],
+        appFruits: fruits,
     },
 
     mounted() {
         this.$on('add-to-cart', (id) => {
-            this.products.push(id)
-        })
+            this.updateCart(id)
+        });
     },
 
     methods: {
         updateCart(id) {
-            this.products.push(id)
+            this.shoppingCart.push(id);
+
+            this.$refs.cartComponent.updateShoppingCart('testje');
         },
 
         showCart() {
@@ -25,9 +26,19 @@ let app = new Vue({
             $('.cart').toggle({
                 direction: 'right',
             });
-        }
-    }
+        },
+
+        fadeOutShoppingCart() {
+            this.$refs.cartComponent.closeShoppingCart();
+        },
+
+        landingPage() {
+
+        },
+
+        template: `<h1>Webshop</h1>`,
+    },
 })
 
-Vue.config.devtools = true
+Vue.config.devtools = true;
 Vue.config.productionTip = false
