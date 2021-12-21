@@ -1,8 +1,15 @@
 let app = new Vue({
     el: '#app',
 
+    props: {
+        official_app_name: {
+            default: 'The Fruit Bowl',
+        }
+    },
+
     data: {
         appName: 'The Fruit Bowl',
+        toggleAppName: false,
         shoppingCart: [],
         appFruits: fruits,
         fruit_filter: 'all',
@@ -19,6 +26,13 @@ let app = new Vue({
             this.shoppingCart.push(id);
 
             this.$refs.cartComponent.updateShoppingCart('testje');
+        },
+
+        changeText() {
+            this.toggleAppName = !this.toggleAppName;
+            
+            this.appName = this.toggleAppName ? 'The cheese factory' : this.official_app_name;
+            
         },
 
         showCart() {
@@ -44,11 +58,7 @@ let app = new Vue({
                 });
             } else {
                 this.appFruits.forEach(element => {
-                    if (element.category != this.fruit_filter) {
-                        element.show = false;
-                    } else {
-                        element.show = true;
-                    }
+                    element.show = element.category != this.fruit_filter ? false : true;
                 });
             }
         },
