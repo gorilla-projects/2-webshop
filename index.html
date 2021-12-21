@@ -31,7 +31,7 @@
     <main id="app">
         <div class="layer" @click="fadeOutShoppingCart"></div>
 
-        <shopping-cart ref="cartComponent" first_name="Toby"></shopping-cart>
+        <shopping-cart ref="cartComponent" first_name="Toby" last_name="Faralley"></shopping-cart>
 
         <div class="container-fluid p-0">
             <header>
@@ -44,9 +44,17 @@
                         <i class="bi bi-cart4 basket" style="font-size: 2em;" @click="showCart"></i>
                     </div>
                 </div>
+                <button @click="changeText">Say cheese :-)</button>
             </header>
 
             <section class="content container">
+                <select @change="filterFruit()" v-model="fruit_filter">
+                    <option value="all">All...</option>
+                    <option value="hardfruit">Hard fruit</option>
+                    <option value="softfruit">Soft fruit</option>
+                    <option value="citrus">Citrus</option>
+                    <option value="redfruit">Red fruit</option>
+                </select>
                 <products fruit_data="something" first_name="Toby" last_name="Versteeg" insertion="van"></products>
             </section>
 

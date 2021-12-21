@@ -5,6 +5,8 @@ const fruits = [
         image: 'apples.jpg',
         cost: 1.25,
         stock: 20,
+        category: 'hardfruit',
+        show: true,
     },
 
     {
@@ -13,6 +15,8 @@ const fruits = [
         image: 'avacados.jpg',
         cost: 3.75,
         stock: 2,
+        category: 'softfruit',
+        show: true,
     },
 
     {
@@ -21,6 +25,8 @@ const fruits = [
         image: 'bananas.jpg',
         cost: 12.95,
         stock: 3,
+        category: 'softfruit',
+        show: true,
     },
 
     {
@@ -29,6 +35,8 @@ const fruits = [
         image: 'berries.jpg',
         cost: 12.95,
         stock: 3,
+        category: 'redfruit',
+        show: true,
     },
 
     {
@@ -37,6 +45,8 @@ const fruits = [
         image: 'grapefruit.jpg',
         cost: 12.95,
         stock: 3,
+        category: 'citrus',
+        show: true,
     },
 
     {
@@ -45,6 +55,8 @@ const fruits = [
         image: 'grapes.jpg',
         cost: 12.95,
         stock: 3,
+        category: 'softfruit',
+        show: true,
     },
 
     {
@@ -53,6 +65,8 @@ const fruits = [
         image: 'kiwis.jpg',
         cost: 12.95,
         stock: 3,
+        category: 'softfruit',
+        show: true,
     },
 
     {
@@ -61,6 +75,8 @@ const fruits = [
         image: 'lemon.jpg',
         cost: 12.95,
         stock: 3,
+        category: 'citrus',
+        show: true,
     },
 
     {
@@ -69,6 +85,8 @@ const fruits = [
         image: 'oranges.jpg',
         cost: 12.95,
         stock: 3,
+        category: 'citrus',
+        show: true,
     },
 
     {
@@ -77,6 +95,8 @@ const fruits = [
         image: 'peaches.jpg',
         cost: 12.95,
         stock: 3,
+        category: 'softfruit',
+        show: true,
     },
 
     {
@@ -85,6 +105,8 @@ const fruits = [
         image: 'raspberries.jpg',
         cost: 12.95,
         stock: 3,
+        category: 'redfruit',
+        show: true,
     },
 
     {
@@ -93,5 +115,7 @@ const fruits = [
         image: 'strawberries.jpg',
         cost: 12.95,
         stock: 3,
+        category: 'redfruit',
+        show: true,
     },
 ]

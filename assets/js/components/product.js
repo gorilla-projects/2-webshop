@@ -43,8 +43,7 @@ Vue.component('products', {
     template: `
         <div class="card">
             <div class="row">
-                <h1>{{ fullName }}</h1>
-                <div class="col-md-4 pt-3" v-for="fruit in fruitBowl">
+                <div class="col-md-4 pt-3" v-for="fruit in fruitBowl" v-if="fruit.show">
                     <img :src="imagePath + fruit.image" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{ fruit.name }}</h5>

@@ -1,12 +1,13 @@
 Vue.component('shopping-cart', {
-    data: function () {
+    data() {
         return {
-            
+            favFruit: 'strawberry',
         }
     },
 
     props: {
-        firstName: '',
+        first_name: '',
+        last_name: '',
     },
 
     methods: {
@@ -21,6 +22,9 @@ Vue.component('shopping-cart', {
     },
 
     template: `<div class="cart">
-        <button>Click me</button>
+        <button>Click me {{ this.favFruit }}</button>
         </div>`,
-})
+}
+
+
+)
