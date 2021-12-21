@@ -5,6 +5,7 @@ let app = new Vue({
         appName: 'The Fruit Bowl',
         shoppingCart: [],
         appFruits: fruits,
+        fruit_filter: 'all',
     },
 
     mounted() {
@@ -34,6 +35,22 @@ let app = new Vue({
 
         landingPage() {
 
+        },
+
+        filterFruit() {
+            if (this.fruit_filter == 'all') {
+                this.appFruits.forEach(element => {
+                    element.show = true;
+                });
+            } else {
+                this.appFruits.forEach(element => {
+                    if (element.category != this.fruit_filter) {
+                        element.show = false;
+                    } else {
+                        element.show = true;
+                    }
+                });
+            }
         },
 
         template: `<h1>Webshop</h1>`,

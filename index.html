@@ -47,6 +47,13 @@
             </header>
 
             <section class="content container">
+                <select @change="filterFruit()" v-model="fruit_filter">
+                    <option value="all">All...</option>
+                    <option value="hardfruit">Hard fruit</option>
+                    <option value="softfruit">Soft fruit</option>
+                    <option value="citrus">Citrus</option>
+                    <option value="redfruit">Red fruit</option>
+                </select>
                 <products fruit_data="something" first_name="Toby" last_name="Versteeg" insertion="van"></products>
             </section>
 
